@@ -2,8 +2,9 @@
 var ballSize = 100
 
 function onBallClick(elCell) {
-  ballSize += 50
-
+  const ranIncrease = getRandomInt(20, 60)
+  ballSize += ranIncrease
+  
   if (ballSize > 400) ballSize = 100
 
   elCell.style.width = `${ballSize}px`
