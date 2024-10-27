@@ -13,35 +13,19 @@ function onBallClick(elCell, madDiameter) {
 }
 
 function swapBalls() {
-  const ball1 = document.querySelector('.ball-1')
-  const ball2 = document.querySelector('.ball-2')
-
-  const tempColor = ball1.style.backgroundColor
-  const tempSize = ball1.innerText
-
-  ball1.style.backgroundColor = ball2.style.backgroundColor
-  ball1.innerText = ball2.innerText
-  ball1.style.width = ball2.style.width
-  ball1.style.height = ball2.style.height
-
-  ball2.style.backgroundColor = tempColor
-  ball2.innerText = tempSize
-  ball2.style.width = `${tempSize}px`
-  ball2.style.height = `${tempSize}px`
-}
-
-function reduceBalls() {
-  const balls = [
-    document.querySelector('.ball-1'),
-    document.querySelector('.ball-2')
-  ];
-
-  const reduction = getRandomInt(20, 60)
-
-  balls.forEach(ball => {
-    const size = Math.max(100, +(ball.innerText) - reduction)
-    ball.innerText = size
-    ball.style.width = `${size}px`
-    ball.style.height = `${size}px`
-  })
+  const ball1 = document.querySelector('.ball-1');
+  const ball2 = document.querySelector('.ball-2');
+  
+  const tempColor = ball1.style.backgroundColor;
+  const tempSize = ball1.innerText;
+  
+  ball1.style.backgroundColor = ball2.style.backgroundColor;
+  ball1.innerText = ball2.innerText;
+  ball1.style.width = ball2.style.width;
+  ball1.style.height = ball2.style.height;
+  
+  ball2.style.backgroundColor = tempColor;
+  ball2.innerText = tempSize;
+  ball2.style.width = `${tempSize}px`;
+  ball2.style.height = `${tempSize}px`;
 }
